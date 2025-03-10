@@ -50,7 +50,7 @@
             color: #444;
         }
 
-                
+        
         /* Social links */
         .social-links {
             display: flex;
@@ -212,56 +212,59 @@
         }
         
         /* Contact options */
-        .contact-options {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-        }
-        
-        .contact-option {
-            background-color: #555;
-            padding: 1rem;
-            border-radius: 0.5rem;
-            text-align: center;
-            transition: all 0.3s;
-            cursor: pointer;
-            text-decoration: none;
-            color: white;
-        }
-        
-        .contact-option:hover {
-            background-color: #666;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-        
-        .contact-option i {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-            color: #8bc34a;
-        }
-        
-        .contact-option h3 {
-            margin: 0.5rem 0;
-            color: #8bc34a;
-        }
-        
-        .contact-option p {
-            margin: 0;
-            font-size: 0.9rem;
-        }
+    .contact-options {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    /* Style for email */
+    .contact-option.email {
+        background-color: #555;
+        padding: 2rem;
+        border-radius: 0.5rem;
+        text-align: center;
+        transition: all 0.3s;
+        cursor: pointer;
+        text-decoration: none;
+        color: white;
+    }
+
+    .contact-option.email:hover {
+        background-color: #666;
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .contact-option.email i {
+        font-size: 2.5rem; 
+        margin-bottom: 0.5rem;
+        color: #8bc34a;
+    }
+
+    .contact-option.email h3 {
+        margin: 0.5rem 0;
+        color: #8bc34a;
+    }
+
+    .contact-option.email p {
+        margin: 0;
+        font-size: 1rem;
+    }
+
     </style>
-    <!-- Font Awesome for icons -->
+    <!-- Font for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+<body>
 <body>
     <div class="container">
         <!-- Profile Section -->
         <div class="profile">
             <h1>Aaron Merchant</h1>
-            <p>Full Stack Developer | Football Enthusiast</p>
+            <p>Full Stack Developer | High School Student</p>
         </div>
-
+    
         
         <!-- Social Links -->
         <div class="social-links">
@@ -282,7 +285,7 @@
         <!-- About Me Section -->
         <div class="card">
             <h2>About Me</h2>
-            <p>Working on a Live LaLiga football stats tracker using TypeScript and React. Passionate about creating meaningful web applications that enhance user experiences and solve real-world problems.</p>
+            <p>Hey! I'm Aaron, a high school student who is interested in programming. Currently working on a Live LaLiga football stats tracker using TypeScript and React. Im passionate about creating meaningful web applications that enhance user experiences and solve real-world problems.</p>
         </div>
         
         <!-- Projects Section -->
@@ -336,7 +339,7 @@
                 </div>
                 <div class="skill-item">
                     <div class="skill-name">
-                        <span>Node.js</span>
+                        <span>Java</span>
                         <span>80%</span>
                     </div>
                     <div class="skill-bar">
@@ -345,7 +348,7 @@
                 </div>
                 <div class="skill-item">
                     <div class="skill-name">
-                        <span>CSS/SCSS</span>
+                        <span>Python</span>
                         <span>95%</span>
                     </div>
                     <div class="skill-bar">
@@ -354,7 +357,7 @@
                 </div>
                 <div class="skill-item">
                     <div class="skill-name">
-                        <span>Python</span>
+                        <span>HTML & CSS</span>
                         <span>75%</span>
                     </div>
                     <div class="skill-bar">
@@ -364,22 +367,18 @@
             </div>
         </div>
         
-        <!-- Contact Section (Streamlined) -->
+        <!-- Contact Section -->
         <div class="card">
             <h2>Get In Touch</h2>
             <div class="contact-options">
-                <a href="mailto:youremail@example.com" class="contact-option">
+                <a href="mailto:aaronmerchant08@gmail.com" class="contact-option email">
                     <i class="fas fa-envelope"></i>
                     <h3>Email Me</h3>
                     <p>Direct message</p>
                 </a>
-                <a href="https://wa.me/1234567890" class="contact-option">
-                    <i class="fab fa-whatsapp"></i>
-                    <h3>WhatsApp</h3>
-                    <p>Quick chat</p>
-                </a>
             </div>
         </div>
+
     </div>
 
     <script>
