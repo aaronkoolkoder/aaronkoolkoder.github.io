@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaron's Portfolio</title>
+    <style>
+        /* Base styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5dc;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 768px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        /* Profile section */
+        .profile {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        /* Heading */
+        .profile h1 {
+            font-size: 2rem;
+            color: #444;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        /* Hover effect on heading */
+        .profile h1:hover {
+            color: #4CAF50;
+        }
+
+        /* Paragraph */
+        .profile p {
+            color: #666;
+            transition: color 0.3s;
+        }
+
+        /* Hover effect on paragraph */
+        .profile p:hover {
+            color: #444;
+        }
+
+                
+        /* Social links */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            background-color: #444;
+            color: #f5f5f5;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .social-link:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .social-link.linkedin:hover {
+            background-color: #0077b5;
+        }
+        
+        .social-link.instagram:hover {
+            background-color: #e4405f;
+        }
+        
+        .social-link.github:hover {
+            background-color: #9c27b0;
+        }
+        
+        .social-link.resume:hover {
+            background-color: #ff9800;
+        }
+        
+        /* Content cards */
+        .card {
+            background-color: #444;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #f5f5f5;
+            transition: all 0.3s;
+        }
+        
+        .card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card h2 {
+            color: #8bc34a;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            transition: color 0.3s;
+        }
+        
+        .card:hover h2 {
+            color: #a5d6a7;
+        }
+        
+        /* Project items */
+        .project {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1.5rem;
+            transition: background-color 0.3s;
+        }
+        
+        .project:hover {
+            background-color: rgba(80, 80, 80, 0.3);
+        }
+        
+        .project-content {
+            flex-grow: 1;
+        }
+        
+        .project h3 {
+            color: #8bc34a;
+            margin-top: 0;
+            transition: color 0.3s;
+        }
+        
+        .project:hover h3 {
+            color: #a5d6a7;
+        }
+        
+        .project p {
+            color: #ddd;
+            transition: color 0.3s;
+        }
+        
+        .project:hover p {
+            color: #fff;
+        }
+        
+        .project-image {
+            width: 128px;
+            height: 128px;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            background-color: #555;
+            flex-shrink: 0;
+            transition: all 0.3s;
+        }
+        
+        .project:hover .project-image {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .project:hover .project-image img {
+            transform: scale(1.1);
+        }
+        
+        /* Skills visualization */
+        .skills-container {
+            margin-top: 1.5rem;
+        }
+        
+        .skill-item {
+            margin-bottom: 1rem;
+        }
+        
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.3rem;
+        }
+        
+        .skill-bar {
+            height: 10px;
+            background-color: #555;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background-color: #8bc34a;
+            border-radius: 5px;
+            transition: width 1s ease-in-out;
+        }
+        
+        /* Contact options */
+        .contact-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .contact-option {
+            background-color: #555;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            transition: all 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .contact-option:hover {
+            background-color: #666;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .contact-option i {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #8bc34a;
+        }
+        
+        .contact-option h3 {
+            margin: 0.5rem 0;
+            color: #8bc34a;
+        }
+        
+        .contact-option p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+    </style>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Profile Section -->
+        <div class="profile">
+            <h1>Aaron Merchant</h1>
+            <p>Full Stack Developer | Football Enthusiast</p>
+        </div>
+
+        
+        <!-- Social Links -->
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/aaronmerch/" class="social-link linkedin" title="LinkedIn" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.instagram.com/aaaronm.76/" class="social-link instagram" title="Instagram" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://github.com/aaronkoolkoder" class="social-link github" title="GitHub" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://drive.google.com/file/d/1nm1fIGBWgNwNV5yqvNxCUQk6amQfoTv-/view?usp=sharing" class="social-link resume" title="Resume" target="_blank">
+                <i class="fas fa-file-alt"></i>
+            </a>
+        </div>
+        
+        <!-- About Me Section -->
+        <div class="card">
+            <h2>About Me</h2>
+            <p>Working on a Live LaLiga football stats tracker using TypeScript and React. Passionate about creating meaningful web applications that enhance user experiences and solve real-world problems.</p>
+        </div>
+        
+        <!-- Projects Section -->
+        <div class="card">
+            <h2>Current Projects</h2>
+            
+            <!-- LaLiga Stats Project -->
+            <div class="project">
+                <div class="project-content">
+                    <h3>LaLiga Live Stats</h3>
+                    <p>A real-time football statistics tracker for LaLiga matches. Built with TypeScript and React, featuring live updates, team analytics, and player performance metrics.</p>
+                </div>
+                <div class="project-image">
+                    <img src="https://crystalpng.com/wp-content/uploads/2023/06/La-liga-new-logo-circle-red.png" alt="LaLiga Stats Project">
+                </div>
+            </div>
+            
+            <!-- Watermark Remover Project -->
+            <div class="project">
+                <div class="project-content">
+                    <h3>Watermark Remover</h3>
+                    <p>An advanced image processing tool that efficiently removes watermarks from images while preserving original image quality. Uses machine learning algorithms for precise detection and removal.</p>
+                </div>
+                <div class="project-image">
+                    <img src="https://cdn1.npcdn.net/images/09d833d49d1bf10665c437be59ead370_1726543427.webp?md5id=c8f0521f5bda726a6f4380142e5b6e6a&new_width=1000&new_height=1000&w=-62170008925&from=png" alt="Watermark Remover Project">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Skills Section -->
+        <div class="card">
+            <h2>My Skills</h2>
+            <div class="skills-container">
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>TypeScript</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 0%;" data-width="90%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>React</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 0%;" data-width="85%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Node.js</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 0%;" data-width="80%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>CSS/SCSS</span>
+                        <span>95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 0%;" data-width="95%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Python</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 0%;" data-width="75%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contact Section (Streamlined) -->
+        <div class="card">
+            <h2>Get In Touch</h2>
+            <div class="contact-options">
+                <a href="mailto:youremail@example.com" class="contact-option">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Me</h3>
+                    <p>Direct message</p>
+                </a>
+                <a href="https://wa.me/1234567890" class="contact-option">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <p>Quick chat</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Animate skill bars on page load
+        window.addEventListener('load', function() {
+            const skillBars = document.querySelectorAll('.skill-progress');
+            setTimeout(() => {
+                skillBars.forEach(bar => {
+                    const width = bar.getAttribute('data-width');
+                    bar.style.width = width;
+                });
+            }, 500);
+        });
+    </script>
+</body>
+</html>
