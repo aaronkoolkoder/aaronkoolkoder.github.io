@@ -87,15 +87,6 @@ export const projects: Project[] = [
     tags: ["Swift", "SwiftUI", "Supabase", "iOS"],
     image: "/projects/table.png",
   },
-  {
-    id: "signal",
-    name: "Signal",
-    blurb: "a daily AI brief built from the sources you actually read",
-    details:
-      "Pulls from the sources you follow, scores what matters with AI, and sends a short daily brief on your schedule.",
-    tags: ["Next.js", "TypeScript", "AI"],
-    image: "/projects/signal.png",
-  },
 ];
 
 /** Shown on the home page */

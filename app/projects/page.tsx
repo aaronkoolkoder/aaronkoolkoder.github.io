@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   description: "Things Aaron Merchant has built.",
 };
 
+// Alphabetical, ignoring case ("myhighschool.club" sits with the Ms)
+const byName = [...projects].sort((a, b) =>
+  a.name.localeCompare(b.name, "en", { sensitivity: "base" }),
+);
+
 export default function ProjectsPage() {
   return (
     <>
@@ -20,7 +25,7 @@ export default function ProjectsPage() {
           <SiteNav active="projects" />
         </header>
 
-        <ProjectSearch projects={projects} />
+        <ProjectSearch projects={byName} />
 
         <footer className="mt-[1em] flex min-h-[1.6em] items-center justify-between border-t border-[var(--line)] pt-[1em] text-[0.8em] text-muted">
           <Clock />
