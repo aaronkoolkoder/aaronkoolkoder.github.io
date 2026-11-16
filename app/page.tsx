@@ -24,7 +24,7 @@ export default function Home() {
         </header>
 
         <div className="space-y-[clamp(0.6em,2dvh,1.5em)]">
-          <p>I&apos;m interested in machine learning and software that runs close to hardware.</p>
+          <p>I&apos;m interested in inference and software that runs close to hardware.</p>
 
           <p>
             I study Computer Engineering @{" "}
