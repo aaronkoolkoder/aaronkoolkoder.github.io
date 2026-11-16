@@ -35,6 +35,17 @@ export const projects: Project[] = [
     image: "/projects/drone.jpg",
   },
   {
+    id: "tinyinfer",
+    name: "tinyinfer",
+    blurb: "an LLM inference engine from scratch in C++, at 102% of llama.cpp's CPU decode speed",
+    details:
+      "Runs GPT-2 and Llama-style models like Qwen2.5 with no PyTorch or BLAS: mmapped weights, a byte-level BPE tokenizer, a KV cache, sampling, and multithreaded NEON kernels. Every step is checked against Hugging Face, and CPU token generation matches llama.cpp.",
+    tags: ["C++", "NEON", "OpenMP", "LLMs", "Python"],
+    href: "https://github.com/aaronkoolkoder/tinyinfer",
+    linkLabel: "source",
+    image: "/projects/tinyinfer.png",
+  },
+  {
     id: "seal-a-driveway",
     name: "Seal A Driveway",
     blurb: "a multiplayer Roblox game with 7.2M plays and 11K CCU",
@@ -77,6 +88,6 @@ export const projects: Project[] = [
 ];
 
 /** Shown on the home page */
-export const featured = ["diorama", "drone", "extrovert-ai"].map(
+export const featured = ["drone", "tinyinfer", "diorama", "extrovert-ai"].map(
   (id) => projects.find((p) => p.id === id)!,
 );
