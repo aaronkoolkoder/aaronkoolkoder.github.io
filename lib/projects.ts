@@ -68,6 +68,17 @@ export const projects: Project[] = [
     image: "/projects/extrovert-ai.jpg",
   },
   {
+    id: "myhighschool-club",
+    name: "myhighschool.club",
+    blurb: "websites for Ontario high-school clubs, used at 10+ schools",
+    details:
+      "A platform that gave high-school clubs their own websites, with templates and an approval workflow for each school. Built with a team of four, it ran for a school year and reached 10+ Ontario high schools.",
+    tags: ["TypeScript", "React", "Supabase", "Tailwind"],
+    href: "https://github.com/anujmish1229/myhighschool.club",
+    linkLabel: "source",
+    image: "/projects/myhighschool-club.webp",
+  },
+  {
     id: "table",
     name: "Table",
     blurb: "poker and blackjack with friends, with 3D avatars",
