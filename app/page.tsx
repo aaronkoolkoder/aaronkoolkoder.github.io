@@ -46,7 +46,7 @@ export default function Home() {
             >
               Lunate Studios
             </Chip>
-            . We developed 2 games, with one reaching 7.2M plays and 11K CCU before getting acquired.
+            . We developed 4 games, with one reaching 7.2M plays and 11K CCU before getting acquired.
           </p>
 
           <div>
